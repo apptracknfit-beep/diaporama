@@ -1,0 +1,19 @@
+# Sources d'origine (les photos finales sont dans slides/)
+photos/
+extracted/
+uploads/
+build-slides.ps1
+slides.json
+index-old.html
+src/
+icons/
+manifest.json
+sw.js
+styles.css
+vercel.json
+
+# Système
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
