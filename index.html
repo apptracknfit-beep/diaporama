@@ -2,366 +2,76 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Diaporama</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=5" />
+  <title>Ombeline ♥ — 18 ans</title>
+  <meta name="description" content="Une histoire d'anniversaire en trois chapitres, rien que pour toi." />
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#FFD700" />
+
+  <!-- iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Ombeline" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" href="icons/icon-192.png" />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; }
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      width: 100%;
-      background: #0a0a0a;
-      color: #f5f5f5;
-      font-family: 'Playfair Display', Georgia, serif;
-      overflow: hidden;
-      overscroll-behavior: none;
-      -webkit-tap-highlight-color: transparent;
-    }
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300;1,500&display=swap"
+    rel="stylesheet"
+  />
 
-    #stage {
-      position: fixed;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: clamp(12px, 3vmin, 32px);
-    }
-
-    .frame {
-      position: relative;
-      background: #111;
-      border: 1px solid rgba(255,255,255,0.08);
-      box-shadow:
-        0 30px 80px rgba(0,0,0,0.6),
-        0 0 0 1px rgba(255,255,255,0.04) inset;
-      border-radius: 4px;
-      padding: clamp(8px, 1.5vmin, 18px);
-      transition: opacity 0.4s ease, transform 0.4s ease;
-      opacity: 0;
-      transform: scale(0.985);
-      max-width: 100%;
-      max-height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .frame.ready { opacity: 1; transform: scale(1); }
-
-    .frame img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      user-select: none;
-      -webkit-user-drag: none;
-      pointer-events: none;
-    }
-
-    .caption {
-      position: absolute;
-      bottom: -34px;
-      left: 0;
-      right: 0;
-      text-align: center;
-      font-size: 13px;
-      letter-spacing: 0.12em;
-      color: rgba(245,245,245,0.55);
-      font-style: italic;
-      text-transform: uppercase;
-    }
-
-    .nav-btn {
-      position: fixed;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.06);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border: 1px solid rgba(255,255,255,0.12);
-      color: #f5f5f5;
-      font-size: 22px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background 0.2s, transform 0.2s;
-      z-index: 10;
-      -webkit-tap-highlight-color: transparent;
-    }
-    .nav-btn:hover { background: rgba(255,255,255,0.14); }
-    .nav-btn:active { transform: translateY(-50%) scale(0.92); }
-    .nav-btn.prev { left: clamp(8px, 2vw, 24px); }
-    .nav-btn.next { right: clamp(8px, 2vw, 24px); }
-
-    .counter {
-      position: fixed;
-      top: clamp(12px, 2.5vh, 24px);
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 13px;
-      letter-spacing: 0.15em;
-      color: rgba(245,245,245,0.5);
-      z-index: 10;
-      pointer-events: none;
-    }
-
-    .progress {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      height: 2px;
-      background: linear-gradient(90deg, #d4af37, #f5d76e);
-      transition: width 0.3s ease;
-      z-index: 10;
-    }
-
-    .loading {
-      position: fixed;
-      inset: 0;
-      background: #0a0a0a;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: rgba(245,245,245,0.6);
-      font-style: italic;
-      letter-spacing: 0.1em;
-      z-index: 100;
-    }
-    .loading.hide { opacity: 0; pointer-events: none; transition: opacity 0.5s; }
-
-    .toolbar {
-      position: fixed;
-      bottom: clamp(14px, 3vh, 28px);
-      right: clamp(14px, 3vw, 28px);
-      display: flex;
-      gap: 10px;
-      z-index: 10;
-    }
-    .tool-btn {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.06);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255,255,255,0.12);
-      color: #f5f5f5;
-      font-size: 16px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      -webkit-tap-highlight-color: transparent;
-    }
-    .tool-btn.active { background: rgba(212,175,55,0.25); border-color: rgba(212,175,55,0.5); }
-
-    @media (max-width: 640px) {
-      .nav-btn {
-        width: 44px;
-        height: 44px;
-        font-size: 18px;
-        background: rgba(255,255,255,0.04);
-      }
-      .caption { bottom: -28px; font-size: 11px; }
-      .counter { font-size: 11px; }
-    }
-
-    @media (hover: none) and (pointer: coarse) {
-      .nav-btn { opacity: 0.4; }
-      .nav-btn:active { opacity: 1; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div id="loading" class="loading">chargement…</div>
+  <div id="root"></div>
 
-  <div id="counter" class="counter"></div>
+  <!-- React + Babel -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
 
-  <div id="stage" aria-roledescription="diaporama">
-    <div id="frame" class="frame">
-      <img id="img" alt="" />
-      <div id="caption" class="caption"></div>
-    </div>
-  </div>
+  <!-- App source (order matters: utils → components → games → screens → app → boot) -->
+  <script type="text/babel" data-presets="react" src="src/utils.jsx"></script>
 
-  <button class="nav-btn prev" id="prev" aria-label="précédent">&#10094;</button>
-  <button class="nav-btn next" id="next" aria-label="suivant">&#10095;</button>
+  <script type="text/babel" data-presets="react" src="src/games/CatchNon.jsx"></script>
+  <script type="text/babel" data-presets="react" src="src/games/Memory.jsx"></script>
+  <script type="text/babel" data-presets="react" src="src/games/CatchCactus.jsx"></script>
 
-  <div class="toolbar">
-    <button class="tool-btn" id="autoplay" aria-label="lecture auto" title="lecture auto">&#9658;</button>
-    <button class="tool-btn" id="fullscreen" aria-label="plein écran" title="plein écran">&#9974;</button>
-  </div>
+  <script type="text/babel" data-presets="react" src="src/screens/Intro.jsx"></script>
+  <script type="text/babel" data-presets="react" src="src/screens/Chapter1.jsx"></script>
+  <script type="text/babel" data-presets="react" src="src/screens/Chapter2.jsx"></script>
+  <script type="text/babel" data-presets="react" src="src/screens/Chapter3.jsx"></script>
+  <script type="text/babel" data-presets="react" src="src/screens/Gift.jsx"></script>
+  <script type="text/babel" data-presets="react" src="src/screens/Games.jsx"></script>
 
-  <div id="progress" class="progress"></div>
+  <script type="text/babel" data-presets="react" src="src/App.jsx"></script>
 
-  <script>
-    (async function () {
-      const stage = document.getElementById('stage');
-      const frame = document.getElementById('frame');
-      const img = document.getElementById('img');
-      const caption = document.getElementById('caption');
-      const counter = document.getElementById('counter');
-      const progress = document.getElementById('progress');
-      const loading = document.getElementById('loading');
-      const prevBtn = document.getElementById('prev');
-      const nextBtn = document.getElementById('next');
-      const autoplayBtn = document.getElementById('autoplay');
-      const fullscreenBtn = document.getElementById('fullscreen');
-
-      let slides = [];
-      let idx = 0;
-      let autoplay = false;
-      let autoplayTimer = null;
-
-      try {
-        const res = await fetch('slides/manifest.json', { cache: 'no-cache' });
-        slides = await res.json();
-      } catch (e) {
-        loading.textContent = 'erreur de chargement';
-        return;
+  <script type="text/babel" data-presets="react">
+    // Boot — wait until every component is on window
+    (function boot() {
+      const required = ['App', 'Intro', 'Chapter1', 'Chapter2', 'Chapter3', 'Gift', 'Games', 'CatchNon', 'Memory', 'CatchCactus'];
+      const missing = required.filter((n) => !window[n]);
+      if (missing.length) {
+        return setTimeout(boot, 30);
       }
-
-      if (!slides.length) {
-        loading.textContent = 'aucune photo';
-        return;
-      }
-
-      function fmtDate(s) {
-        // Show "JJ mois AAAA" in French if possible
-        const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(s);
-        if (!m) return s;
-        const months = ['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
-        return parseInt(m[3], 10) + ' ' + months[parseInt(m[2], 10) - 1] + ' ' + m[1];
-      }
-
-      function sizeFrame(slide) {
-        // Compute available viewport (minus stage padding ~ 6vmin total)
-        const pad = Math.max(24, Math.min(64, window.innerWidth * 0.06));
-        const availW = window.innerWidth - pad;
-        const availH = window.innerHeight - pad;
-
-        // Reserve a little for the inner frame padding (~ 2 * ~14px) and caption
-        const innerPad = 28;
-        const captionAllowance = 44;
-
-        const maxW = Math.max(100, availW - innerPad);
-        const maxH = Math.max(100, availH - innerPad - captionAllowance);
-
-        const ratio = slide.width / slide.height;
-        let w = maxW;
-        let h = w / ratio;
-        if (h > maxH) {
-          h = maxH;
-          w = h * ratio;
-        }
-        // Cap to natural size — do NOT upscale beyond original pixels
-        if (w > slide.width)  { w = slide.width;  h = w / ratio; }
-        if (h > slide.height) { h = slide.height; w = h * ratio; }
-
-        frame.style.width  = Math.round(w + innerPad) + 'px';
-        frame.style.height = Math.round(h + innerPad) + 'px';
-      }
-
-      function preload(i) {
-        if (i < 0 || i >= slides.length) return;
-        const p = new Image();
-        p.src = 'slides/' + slides[i].file;
-      }
-
-      function render() {
-        const slide = slides[idx];
-        sizeFrame(slide);
-        frame.classList.remove('ready');
-        img.onload = () => frame.classList.add('ready');
-        img.src = 'slides/' + slide.file;
-        img.alt = 'Photo ' + (idx + 1);
-        caption.textContent = fmtDate(slide.date);
-        counter.textContent = (idx + 1) + ' / ' + slides.length;
-        progress.style.width = (((idx + 1) / slides.length) * 100) + '%';
-
-        // Preload neighbors
-        preload(idx + 1);
-        preload(idx + 2);
-        preload(idx - 1);
-      }
-
-      function go(delta) {
-        idx = (idx + delta + slides.length) % slides.length;
-        render();
-      }
-
-      function startAutoplay() {
-        autoplay = true;
-        autoplayBtn.classList.add('active');
-        autoplayBtn.innerHTML = '&#10073;&#10073;';
-        clearInterval(autoplayTimer);
-        autoplayTimer = setInterval(() => go(1), 4000);
-      }
-      function stopAutoplay() {
-        autoplay = false;
-        autoplayBtn.classList.remove('active');
-        autoplayBtn.innerHTML = '&#9658;';
-        clearInterval(autoplayTimer);
-      }
-
-      // Events
-      prevBtn.addEventListener('click', () => { stopAutoplay(); go(-1); });
-      nextBtn.addEventListener('click', () => { stopAutoplay(); go(1); });
-      autoplayBtn.addEventListener('click', () => autoplay ? stopAutoplay() : startAutoplay());
-      fullscreenBtn.addEventListener('click', () => {
-        if (!document.fullscreenElement) {
-          (document.documentElement.requestFullscreen || document.documentElement.webkitRequestFullscreen).call(document.documentElement);
-        } else {
-          (document.exitFullscreen || document.webkitExitFullscreen).call(document);
-        }
-      });
-
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowRight' || e.key === ' ') { stopAutoplay(); go(1); }
-        else if (e.key === 'ArrowLeft') { stopAutoplay(); go(-1); }
-        else if (e.key === 'Home') { stopAutoplay(); idx = 0; render(); }
-        else if (e.key === 'End') { stopAutoplay(); idx = slides.length - 1; render(); }
-        else if (e.key === 'f' || e.key === 'F') fullscreenBtn.click();
-      });
-
-      // Touch swipe
-      let touchStartX = 0, touchStartY = 0, touchActive = false;
-      stage.addEventListener('touchstart', (e) => {
-        if (e.touches.length !== 1) return;
-        touchActive = true;
-        touchStartX = e.touches[0].clientX;
-        touchStartY = e.touches[0].clientY;
-      }, { passive: true });
-      stage.addEventListener('touchend', (e) => {
-        if (!touchActive) return;
-        touchActive = false;
-        const dx = e.changedTouches[0].clientX - touchStartX;
-        const dy = e.changedTouches[0].clientY - touchStartY;
-        if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
-          stopAutoplay();
-          go(dx < 0 ? 1 : -1);
-        }
-      }, { passive: true });
-
-      // Click on image area (for desktop quick advance)
-      img.parentElement.addEventListener('click', (e) => {
-        const rect = frame.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        if (x < rect.width / 2) { stopAutoplay(); go(-1); }
-        else { stopAutoplay(); go(1); }
-      });
-
-      window.addEventListener('resize', () => sizeFrame(slides[idx]));
-
-      render();
-      requestAnimationFrame(() => loading.classList.add('hide'));
+      const root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(<window.App />);
     })();
+  </script>
+
+  <!-- Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js').catch(() => {});
+      });
+    }
   </script>
 </body>
 </html>

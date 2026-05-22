@@ -5,12 +5,7 @@ uploads/
 build-slides.ps1
 slides.json
 index-old.html
-src/
-icons/
-/manifest.json
-sw.js
-styles.css
-vercel.json
+index-slideshow-only.html
 
 # Système
 .DS_Store
