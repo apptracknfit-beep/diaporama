@@ -1,0 +1,885 @@
+﻿[
+    {
+        "file":  "001.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2024-08-07 10:12:06",
+        "hasExif":  true
+    },
+    {
+        "file":  "002.jpeg",
+        "width":  1179,
+        "height":  1544,
+        "date":  "2024-08-18 17:18:17",
+        "hasExif":  true
+    },
+    {
+        "file":  "003.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2024-09-07 18:30:51",
+        "hasExif":  true
+    },
+    {
+        "file":  "004.jpeg",
+        "width":  3088,
+        "height":  2316,
+        "date":  "2024-09-07 18:31:09",
+        "hasExif":  true
+    },
+    {
+        "file":  "005.jpeg",
+        "width":  4032,
+        "height":  3024,
+        "date":  "2024-09-07 18:32:32",
+        "hasExif":  true
+    },
+    {
+        "file":  "006.jpeg",
+        "width":  3024,
+        "height":  4032,
+        "date":  "2024-09-14 11:45:14",
+        "hasExif":  true
+    },
+    {
+        "file":  "007.jpeg",
+        "width":  4032,
+        "height":  3024,
+        "date":  "2024-09-14 11:45:16",
+        "hasExif":  true
+    },
+    {
+        "file":  "008.jpeg",
+        "width":  4032,
+        "height":  3024,
+        "date":  "2024-09-14 11:53:33",
+        "hasExif":  true
+    },
+    {
+        "file":  "009.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2024-09-21 15:57:42",
+        "hasExif":  true
+    },
+    {
+        "file":  "010.jpeg",
+        "width":  4032,
+        "height":  3024,
+        "date":  "2024-09-22 12:20:47",
+        "hasExif":  true
+    },
+    {
+        "file":  "011.jpeg",
+        "width":  3088,
+        "height":  2316,
+        "date":  "2024-09-22 13:32:05",
+        "hasExif":  true
+    },
+    {
+        "file":  "012.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2024-09-22 13:32:10",
+        "hasExif":  true
+    },
+    {
+        "file":  "013.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2024-10-05 09:10:18",
+        "hasExif":  true
+    },
+    {
+        "file":  "014.jpeg",
+        "width":  1179,
+        "height":  1569,
+        "date":  "2024-10-26 20:53:46",
+        "hasExif":  true
+    },
+    {
+        "file":  "015.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2024-12-07 23:53:01",
+        "hasExif":  true
+    },
+    {
+        "file":  "016.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2024-12-31 14:28:54",
+        "hasExif":  true
+    },
+    {
+        "file":  "017.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-01-10 22:44:10",
+        "hasExif":  true
+    },
+    {
+        "file":  "018.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-01-18 15:01:24",
+        "hasExif":  true
+    },
+    {
+        "file":  "019.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-02-15 14:39:52",
+        "hasExif":  true
+    },
+    {
+        "file":  "020.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-03-01 13:57:59",
+        "hasExif":  true
+    },
+    {
+        "file":  "021.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-04-22 16:51:48",
+        "hasExif":  true
+    },
+    {
+        "file":  "022.jpeg",
+        "width":  6048,
+        "height":  8064,
+        "date":  "2025-04-23 11:21:33",
+        "hasExif":  true
+    },
+    {
+        "file":  "023.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-04-23 18:19:47",
+        "hasExif":  true
+    },
+    {
+        "file":  "024.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-04-23 18:19:56",
+        "hasExif":  true
+    },
+    {
+        "file":  "025.jpeg",
+        "width":  2048,
+        "height":  1536,
+        "date":  "2025-05-02 17:58:17",
+        "hasExif":  true
+    },
+    {
+        "file":  "026.jpeg",
+        "width":  2048,
+        "height":  1536,
+        "date":  "2025-05-02 17:59:56",
+        "hasExif":  true
+    },
+    {
+        "file":  "027.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-05-11 13:29:22",
+        "hasExif":  true
+    },
+    {
+        "file":  "028.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-05-24 23:56:44",
+        "hasExif":  true
+    },
+    {
+        "file":  "029.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-05-24 23:57:02",
+        "hasExif":  true
+    },
+    {
+        "file":  "030.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-07-05 19:19:06",
+        "hasExif":  true
+    },
+    {
+        "file":  "031.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-07-05 19:19:11",
+        "hasExif":  true
+    },
+    {
+        "file":  "032.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-07-09 19:50:52",
+        "hasExif":  true
+    },
+    {
+        "file":  "033.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-07-19 14:08:12",
+        "hasExif":  true
+    },
+    {
+        "file":  "034.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-07-19 16:06:41",
+        "hasExif":  true
+    },
+    {
+        "file":  "035.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-07-20 19:11:15",
+        "hasExif":  true
+    },
+    {
+        "file":  "036.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-07-20 19:11:16",
+        "hasExif":  true
+    },
+    {
+        "file":  "037.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-07-20 19:11:18",
+        "hasExif":  true
+    },
+    {
+        "file":  "038.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-07-20 19:11:19",
+        "hasExif":  true
+    },
+    {
+        "file":  "039.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-08-10 18:38:59",
+        "hasExif":  true
+    },
+    {
+        "file":  "040.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-08-15 12:16:18",
+        "hasExif":  true
+    },
+    {
+        "file":  "041.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-08-15 15:13:29",
+        "hasExif":  true
+    },
+    {
+        "file":  "042.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-08-16 07:45:35",
+        "hasExif":  true
+    },
+    {
+        "file":  "043.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-08-18 12:55:37",
+        "hasExif":  true
+    },
+    {
+        "file":  "044.jpeg",
+        "width":  6048,
+        "height":  8064,
+        "date":  "2025-08-19 16:14:47",
+        "hasExif":  true
+    },
+    {
+        "file":  "045.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-08-20 11:45:24",
+        "hasExif":  true
+    },
+    {
+        "file":  "046.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-08-25 13:36:06",
+        "hasExif":  true
+    },
+    {
+        "file":  "047.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-08-28 12:12:22",
+        "hasExif":  true
+    },
+    {
+        "file":  "048.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-08-28 12:12:34",
+        "hasExif":  true
+    },
+    {
+        "file":  "049.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-08-29 22:35:10",
+        "hasExif":  true
+    },
+    {
+        "file":  "050.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-08-30 22:45:56",
+        "hasExif":  true
+    },
+    {
+        "file":  "051.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-08-30 22:46:17",
+        "hasExif":  true
+    },
+    {
+        "file":  "052.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-08-31 22:25:33",
+        "hasExif":  true
+    },
+    {
+        "file":  "053.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-09-19 21:31:07",
+        "hasExif":  true
+    },
+    {
+        "file":  "054.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-09-29 19:31:29",
+        "hasExif":  true
+    },
+    {
+        "file":  "055.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-10-04 15:15:28",
+        "hasExif":  true
+    },
+    {
+        "file":  "056.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-10-04 19:46:15",
+        "hasExif":  true
+    },
+    {
+        "file":  "057.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-10-13 19:02:33",
+        "hasExif":  true
+    },
+    {
+        "file":  "058.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-10-18 09:52:59",
+        "hasExif":  true
+    },
+    {
+        "file":  "059.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-10-25 14:26:47",
+        "hasExif":  true
+    },
+    {
+        "file":  "060.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-10-25 14:28:28",
+        "hasExif":  true
+    },
+    {
+        "file":  "061.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-10-25 15:11:34",
+        "hasExif":  true
+    },
+    {
+        "file":  "062.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-10-25 15:23:24",
+        "hasExif":  true
+    },
+    {
+        "file":  "063.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-10-25 15:45:47",
+        "hasExif":  true
+    },
+    {
+        "file":  "064.jpeg",
+        "width":  2048,
+        "height":  1536,
+        "date":  "2025-10-25 17:19:42",
+        "hasExif":  true
+    },
+    {
+        "file":  "065.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-10-25 18:09:57",
+        "hasExif":  true
+    },
+    {
+        "file":  "066.jpeg",
+        "width":  2048,
+        "height":  1536,
+        "date":  "2025-10-25 18:24:36",
+        "hasExif":  true
+    },
+    {
+        "file":  "067.jpeg",
+        "width":  2048,
+        "height":  1536,
+        "date":  "2025-10-26 09:17:05",
+        "hasExif":  true
+    },
+    {
+        "file":  "068.jpeg",
+        "width":  2048,
+        "height":  1536,
+        "date":  "2025-10-26 14:40:41",
+        "hasExif":  true
+    },
+    {
+        "file":  "069.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-10-26 15:18:32",
+        "hasExif":  true
+    },
+    {
+        "file":  "070.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-10-26 16:07:30",
+        "hasExif":  true
+    },
+    {
+        "file":  "071.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-10-26 16:57:24",
+        "hasExif":  true
+    },
+    {
+        "file":  "072.jpeg",
+        "width":  2048,
+        "height":  1536,
+        "date":  "2025-10-26 17:24:17",
+        "hasExif":  true
+    },
+    {
+        "file":  "073.jpeg",
+        "width":  2048,
+        "height":  1536,
+        "date":  "2025-10-26 17:24:22",
+        "hasExif":  true
+    },
+    {
+        "file":  "074.jpeg",
+        "width":  2048,
+        "height":  1536,
+        "date":  "2025-10-26 19:19:27",
+        "hasExif":  true
+    },
+    {
+        "file":  "075.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-10-27 09:44:54",
+        "hasExif":  true
+    },
+    {
+        "file":  "076.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-11-26 13:57:40",
+        "hasExif":  true
+    },
+    {
+        "file":  "077.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2025-11-26 13:57:44",
+        "hasExif":  true
+    },
+    {
+        "file":  "078.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2026-03-25 19:06:45",
+        "hasExif":  true
+    },
+    {
+        "file":  "079.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2026-04-18 23:10:19",
+        "hasExif":  true
+    },
+    {
+        "file":  "080.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2026-04-19 12:19:55",
+        "hasExif":  true
+    },
+    {
+        "file":  "081.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2026-04-19 13:02:00",
+        "hasExif":  true
+    },
+    {
+        "file":  "082.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2026-04-19 18:30:38",
+        "hasExif":  true
+    },
+    {
+        "file":  "083.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2026-04-19 18:32:07",
+        "hasExif":  true
+    },
+    {
+        "file":  "084.jpeg",
+        "width":  2048,
+        "height":  1536,
+        "date":  "2026-04-19 18:51:35",
+        "hasExif":  true
+    },
+    {
+        "file":  "085.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2026-04-20 14:38:53",
+        "hasExif":  true
+    },
+    {
+        "file":  "086.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2026-04-21 16:35:48",
+        "hasExif":  true
+    },
+    {
+        "file":  "087.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2026-04-22 14:06:05",
+        "hasExif":  true
+    },
+    {
+        "file":  "088.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2026-04-22 14:06:06",
+        "hasExif":  true
+    },
+    {
+        "file":  "089.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2026-04-22 14:55:29",
+        "hasExif":  true
+    },
+    {
+        "file":  "090.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2026-04-22 15:12:59",
+        "hasExif":  true
+    },
+    {
+        "file":  "091.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2026-04-23 14:17:06",
+        "hasExif":  true
+    },
+    {
+        "file":  "092.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2026-04-25 07:43:37",
+        "hasExif":  true
+    },
+    {
+        "file":  "093.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2026-05-04 18:27:21",
+        "hasExif":  true
+    },
+    {
+        "file":  "094.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2026-05-09 12:14:47",
+        "hasExif":  true
+    },
+    {
+        "file":  "095.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2026-05-09 12:14:56",
+        "hasExif":  true
+    },
+    {
+        "file":  "096.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2026-05-09 15:36:12",
+        "hasExif":  true
+    },
+    {
+        "file":  "097.jpeg",
+        "width":  1536,
+        "height":  2048,
+        "date":  "2026-05-09 16:03:08",
+        "hasExif":  true
+    },
+    {
+        "file":  "098.png",
+        "width":  1179,
+        "height":  2556,
+        "date":  "2026-05-22 16:02:06",
+        "hasExif":  false
+    },
+    {
+        "file":  "099.png",
+        "width":  1179,
+        "height":  2556,
+        "date":  "2026-05-22 16:02:08",
+        "hasExif":  false
+    },
+    {
+        "file":  "100.png",
+        "width":  1179,
+        "height":  2556,
+        "date":  "2026-05-22 16:02:08",
+        "hasExif":  false
+    },
+    {
+        "file":  "101.png",
+        "width":  1179,
+        "height":  2556,
+        "date":  "2026-05-22 16:02:08",
+        "hasExif":  false
+    },
+    {
+        "file":  "102.png",
+        "width":  1179,
+        "height":  2556,
+        "date":  "2026-05-22 16:02:08",
+        "hasExif":  false
+    },
+    {
+        "file":  "103.png",
+        "width":  1179,
+        "height":  2556,
+        "date":  "2026-05-22 16:02:10",
+        "hasExif":  false
+    },
+    {
+        "file":  "104.jpg",
+        "width":  1656,
+        "height":  2208,
+        "date":  "2026-05-22 16:02:10",
+        "hasExif":  false
+    },
+    {
+        "file":  "105.jpg",
+        "width":  1242,
+        "height":  2208,
+        "date":  "2026-05-22 16:13:34",
+        "hasExif":  false
+    },
+    {
+        "file":  "106.jpg",
+        "width":  1242,
+        "height":  2208,
+        "date":  "2026-05-22 16:13:34",
+        "hasExif":  false
+    },
+    {
+        "file":  "107.jpg",
+        "width":  1242,
+        "height":  2208,
+        "date":  "2026-05-22 16:13:40",
+        "hasExif":  false
+    },
+    {
+        "file":  "108.jpg",
+        "width":  1242,
+        "height":  2208,
+        "date":  "2026-05-22 16:13:40",
+        "hasExif":  false
+    },
+    {
+        "file":  "109.jpg",
+        "width":  1242,
+        "height":  2208,
+        "date":  "2026-05-22 16:13:40",
+        "hasExif":  false
+    },
+    {
+        "file":  "110.jpg",
+        "width":  1242,
+        "height":  2208,
+        "date":  "2026-05-22 16:13:48",
+        "hasExif":  false
+    },
+    {
+        "file":  "111.jpg",
+        "width":  1242,
+        "height":  2208,
+        "date":  "2026-05-22 16:13:48",
+        "hasExif":  false
+    },
+    {
+        "file":  "112.png",
+        "width":  1179,
+        "height":  2556,
+        "date":  "2026-05-22 16:13:48",
+        "hasExif":  false
+    },
+    {
+        "file":  "113.jpg",
+        "width":  1242,
+        "height":  2208,
+        "date":  "2026-05-22 16:13:48",
+        "hasExif":  false
+    },
+    {
+        "file":  "114.jpg",
+        "width":  1242,
+        "height":  2208,
+        "date":  "2026-05-22 16:13:48",
+        "hasExif":  false
+    },
+    {
+        "file":  "115.jpeg",
+        "width":  242,
+        "height":  373,
+        "date":  "2026-05-22 16:13:50",
+        "hasExif":  false
+    },
+    {
+        "file":  "116.jpeg",
+        "width":  1575,
+        "height":  856,
+        "date":  "2026-05-22 16:13:50",
+        "hasExif":  false
+    },
+    {
+        "file":  "117.jpg",
+        "width":  1080,
+        "height":  1920,
+        "date":  "2026-05-22 16:13:50",
+        "hasExif":  false
+    },
+    {
+        "file":  "118.jpg",
+        "width":  1242,
+        "height":  2208,
+        "date":  "2026-05-22 16:13:52",
+        "hasExif":  false
+    },
+    {
+        "file":  "119.png",
+        "width":  1179,
+        "height":  2556,
+        "date":  "2026-05-22 16:13:52",
+        "hasExif":  false
+    },
+    {
+        "file":  "120.jpeg",
+        "width":  1242,
+        "height":  2208,
+        "date":  "2026-05-22 16:13:54",
+        "hasExif":  false
+    },
+    {
+        "file":  "121.png",
+        "width":  1179,
+        "height":  2556,
+        "date":  "2026-05-22 16:13:56",
+        "hasExif":  false
+    },
+    {
+        "file":  "122.png",
+        "width":  1179,
+        "height":  2556,
+        "date":  "2026-05-22 16:13:56",
+        "hasExif":  false
+    },
+    {
+        "file":  "123.png",
+        "width":  1179,
+        "height":  2556,
+        "date":  "2026-05-22 16:13:56",
+        "hasExif":  false
+    },
+    {
+        "file":  "124.jpeg",
+        "width":  360,
+        "height":  480,
+        "date":  "2026-05-22 16:13:58",
+        "hasExif":  false
+    },
+    {
+        "file":  "125.png",
+        "width":  941,
+        "height":  1672,
+        "date":  "2026-05-22 16:14:04",
+        "hasExif":  false
+    },
+    {
+        "file":  "126.jpeg",
+        "width":  1656,
+        "height":  2208,
+        "date":  "2026-05-22 18:14:07",
+        "hasExif":  false
+    }
+]
+

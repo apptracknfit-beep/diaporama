@@ -7,7 +7,7 @@ slides.json
 index-old.html
 src/
 icons/
-manifest.json
+/manifest.json
 sw.js
 styles.css
 vercel.json
